@@ -5,7 +5,7 @@ import '../Loading/Loading.style.scss'
 
 const Loading = () => (
     <div className="loading-container">
-        <ReactLoading type="spin" color="grey" height={100} width={100} />
+        <ReactLoading type="spin" color="grey" height={75} width={75} />
     </div>
 );
 
