@@ -2,7 +2,7 @@
 
 ## Description
   * App that shows images from NASAs API.
-    *  users can like and unlike images
+    *  users can like and unlike images </br>
   view it here: https://danielsnasagram.web.app/
 
 ## To Start:
