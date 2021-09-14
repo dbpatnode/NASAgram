@@ -1,10 +1,12 @@
 import React from 'react';
-// import './Card.style.scss'
+import ReactLoading from 'react-loading';
 
-const Loading = () => {
-    return (
-        <div>Loading</div>
-    );
-};
+import '../Loading/Loading.style.scss'
+
+const Loading = () => (
+    <div className="loading-container">
+        <ReactLoading type="spin" color="grey" height={100} width={100} />
+    </div>
+);
 
 export default Loading;
