@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './CardContainer.style.scss'
-
-import Card from '../Card/Card.component';
+import { Card } from 'semantic-ui-react'
+import ImageCard from '../Card/Card.component';
 import Loading from '../Loading/Loading.component';
 
 const CardContainer = () => {
@@ -24,26 +24,26 @@ const CardContainer = () => {
         fetchData();
     }, []);
 
-
     return (
-
-        <div div >
-            {
-                loading ?
-                    (
-                        <Loading />
-                    )
-                    :
-                    nasaData.map((data) =>
-                        < Card
-                            key={data.date}
-                            title={data.title}
-                            date={data.date}
-                            photo={data.hdurl}
-                            caption={data.explanation}
-                        />
-                    )
-            }
+        <div className="card-container">
+            <Card.Group >
+                {
+                    loading ?
+                        (
+                            <Loading />
+                        )
+                        :
+                        nasaData.map((data) =>
+                            < ImageCard
+                                key={data.date}
+                                title={data.title}
+                                date={data.date}
+                                photo={data.hdurl}
+                                caption={data.explanation}
+                            />
+                        )
+                }
+            </Card.Group>
         </div>
     );
 };

@@ -1,0 +1,15 @@
+.card-container {
+    display: flex;
+    flex-direction: column;
+    background-size: cover !important;
+    -webkit-background-size: cover !important;
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+
+    .cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}

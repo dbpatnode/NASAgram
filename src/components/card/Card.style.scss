@@ -1,0 +1,22 @@
+.card {
+    position: relative;
+    // text-align: center;
+    // padding: 70px;
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid red;
+    margin-top: 20px;
+    // margin-left: 20px;
+    // margin-right: 20px;
+
+        img {
+            max-height: 300px;
+            width: 100%
+        }
+
+        .date {
+            margin-top:10px !important;
+        }
+}
+

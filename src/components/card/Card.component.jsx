@@ -2,45 +2,25 @@
 // import React, { useState, useEffect } from 'react';
 import React from 'react';
 import './Card.style.scss'
+import { Card, Icon, Image } from 'semantic-ui-react'
 
-const Card = ({ photo, title, date, caption }) => {
+const ImageCard = ({ photo, title, date, caption }) => {
+    console.log(photo)
     return (
-        <div>
-            <div>
-                <img src={photo} alt={title}></img>
-            </div>
-            <div>
-                <p><b>{title} - {date}</b></p>
-                <p>{caption}</p>
-            </div>
-        </div>
+        <Card className="card">
+            <Card.Header><span><b>SpaceGuy12:</b></span>  <span className="title">{title}</span></Card.Header>
+            <Image src={photo} wrapped ui={false} />
+            <Card.Content>
+                <Card.Meta>
+                    <span className='date'><i>Posted {date}</i></span>
+                </Card.Meta>
+
+                <Card.Description>
+                    {caption}
+                </Card.Description>
+            </Card.Content>
+        </Card>
     );
 };
 
-export default Card;
-
-
-
-
-
-// const Photo = ({ photo }) => (
-//     <Card color="orange">
-//         <Image
-//             src={photo.img_src}
-//             alt="Mars's surface"
-//             style={{ height: "200px" }}
-//         />
-//         <Card.Content>
-//             <Card.Header>
-//                 {photo.rover.name} - {photo.camera.full_name}
-//             </Card.Header>
-//             <Card.Meta>{photo.earth_date}</Card.Meta>
-//         </Card.Content>
-//         <label>
-//             <input type="checkbox" />
-//             <div className="like-btn-svg icon" />
-//         </label>
-//     </Card>
-// );
-
-// export default Photo;
+export default ImageCard;
